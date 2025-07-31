@@ -1,3 +1,9 @@
+DOM => Document Object Model
+object{} that represent the page you see in the web browser and provide yoou with an API to interact with it!
+web browser constructs the DOM when t loads a HTML document and stuctures all the elements in a tree like structure
+JS can ccess the DOM to dynamically change the content,structure and style of the web page!
+ 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,8 +19,23 @@
 </head>
 <body class="bg-black">
     <div>
-        <h1 id="title" class="heding"> DOM learning on Youtube! </h1>
+        <h1 id="title" class="heding"> Welcome</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, quaerat reiciendis possimus perspiciatis iusto eaque a sed quod veniam. Tempora.</p>
     </div>
 </body>
 </html>
+
+<!-- Different methods in dom to access different nodes -->
+
+document.getElementById('id-name');
+
+document.title='My Website';
+
+document.body.style.backgroundcolor="hsl(0,0%,15%);
+
+const username = "janish Lathwal"
+const welcomeMsg= document.getElementById("title")
+
+.textContent is used to get or set the text content of an HTML element. It's a property that allows you to manipulate the text inside an element, excluding any HTML tags.
+
+welcomeMsg.textContent +=username==="" ? 'guest' : username;
