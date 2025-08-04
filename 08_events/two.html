@@ -10,28 +10,38 @@
     <button id="stop">Stop</button>
 </body>
 <script>
+    // syntax 1...
+    setTimeout(function(){
+        console.log("Hello !")
+    },2000)
+
+    // syntax 2...
     const sayHitesh = function(){
         console.log("Hitesh");
     }
+     // it will run after 2000 mili seconds or we can say 2 sec!
+    setTimeout(sayHitesh,2000);
+
+    
     const changeText = function(){
         document.querySelector('h1').innerHTML = "best JS series"
-    }
-    // it will run after 2000 mili seconds or we can say 2 sec! 
+    } 
+    // we have to give refrence of the function not to call the function!
     const changeMe = setTimeout(changeText, 2000)
 
-    console.log("Start");
 
+    console.log("Start");
     setTimeout(() => {
     console.log("This runs after 2 seconds");
     }, 2000);
-
     console.log("End");
-
     // o/p will be:- 
     // start
     // End
     // This runs after 2 seconds!
 
+
+    // clear timeout will remove all the calls of the setTimeout from the stack and queue!
     document.querySelector('#stop').addEventListener('click', function(){
         clearTimeout(changeMe)
         console.log("STOPPED")
