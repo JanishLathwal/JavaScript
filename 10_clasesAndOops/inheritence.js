@@ -8,9 +8,10 @@ class User {
     }
 }
 
+// inheritence from the class User!
 class Teacher extends User{
     constructor(username, email, password){
-        super(username)
+        super(username) //in classes we dont need to use call function!
         this.email = email
         this.password = password
     }
@@ -21,10 +22,11 @@ class Teacher extends User{
 }
 
 const chai = new Teacher("chai", "chai@teacher.com", "123")
-
+chai.addCourse();
 chai.logMe()
 const masalaChai = new User("masalaChai")
-
 masalaChai.logMe()
 
+// to check chai is object of which class!
 console.log(chai instanceof User);
+// true bcoz: chai is instance of teacher which had inhereted user class!
